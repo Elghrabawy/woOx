@@ -78,6 +78,7 @@ $allCountries = $countries->fetchAll(PDO::FETCH_OBJ);
         </nav>
     </div>
 </section>
+
 <!-- ***** Main Banner Area End ***** -->
 
 <div class="visit-country">

@@ -16,7 +16,6 @@ if (isset($_GET['id'])) {
     header("location: " . APPURL . "");
 }
 
-
 if (isset($_POST['submit'])) {
     if (
         empty($_POST['name']) or empty($_POST['phone_number']) or
@@ -33,7 +32,6 @@ if (isset($_POST['submit'])) {
         $user_id = $_SESSION['user_id'];
         $city_id = $id;
 
-
         $insert = $conn->prepare(
             "INSERT INTO booking(name, phone_number, num_of_guests, checkin_date, destination, status, city_id, user_id)
             VALUES (:name, :phone_number, :num_of_guests, :checkin_date, :destination, :status, :city_id, :user_id)"
@@ -49,10 +47,13 @@ if (isset($_POST['submit'])) {
             ":city_id" => $city_id,
             ":user_id" => $user_id,
         ]);
-        header("location: " . APPURL . "");
+
+        $payment = $num_of_guests * $city->price;
+        $_SESSION['payment'] = $payment;
+
+        header("location: pay.php");
     }
 }
-
 ?>
 
 <div class="second-page-heading">
