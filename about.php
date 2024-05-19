@@ -36,8 +36,7 @@ if (isset($_GET['id'])) {
     );
     $countBookings->execute();
     $num_bookings = $countBookings->fetch(PDO::FETCH_OBJ);
-}
-else{
+} else {
     header("location: " . APPURL . "");
 }
 ?>

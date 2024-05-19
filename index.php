@@ -49,7 +49,7 @@ $allCountries = $countries->fetchAll(PDO::FETCH_OBJ);
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-home"></i>
-                                                <h4><span>AVG Price:</span><br>$<?php echo $country->avg ?></h4>
+                                                <h4><span>AVG Price:</span><br>$<?php echo round($country->avg, 2); ?></h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <div class="main-button">
@@ -104,7 +104,7 @@ $allCountries = $countries->fetchAll(PDO::FETCH_OBJ);
                                                 <img src="assets/images/<?php echo $country->image ?>" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-lg-8 col-sm-7">
+                                        <div class="col-lg-8 col-zsm-7">
                                             <div class="right-content">
                                                 <h4 class="text-white"><?php echo $country->name ?></h4>
                                                 <span><?php echo $country->continent ?></span>
