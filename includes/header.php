@@ -67,7 +67,7 @@ define("APPURL", "http://localhost/wooxtravel");
                                         <?php echo $_SESSION['username']; ?>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item text-dark" href="#">Action</a></li>
+                                        <li><a class="dropdown-item text-dark" href="<?php echo APPURL; ?>/users/users.php?id=<?php echo $_SESSION['user_id'] ?>">Your Bookings</a></li>
                                         <li><a class="dropdown-item text-dark" href="#">Another action</a></li>
                                         <li>
                                             <hr class="dropdown-divider">

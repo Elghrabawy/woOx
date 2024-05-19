@@ -2,10 +2,10 @@
 <?php require "config/connect.php"; ?>
 
 <?php
-    if(!isset($_SERVER['HTTP_REFERER'])){
-        header('location: http://localhost/wooxtravel/index.php');
-        exit;
-    }
+if (!isset($_SERVER['HTTP_REFERER'])) {
+    header('location: http://localhost/wooxtravel/index.php');
+    exit;
+}
 
 ?>
 
@@ -14,7 +14,7 @@
     <script src="https://www.paypal.com/sdk/js?client-id=AU_NG2eBB4E6TZvYd7HhLvWGPJZLsINc9ph6DyGjauE5oPtJ-2MfSZu7YpQoxvm6nKBsggcFVteinlFY&currency=USD"></script>
     <div class="row justify-content-center">
         <!-- Set up a container element for the button -->
-        <div class = "col-7" style = "margin-top: 100px; text-align: center;" id="paypal-button-container"></div>
+        <div class="col-7" style="margin-top: 100px; text-align: center;" id="paypal-button-container"></div>
 
     </div>
     <script>
@@ -39,8 +39,6 @@
         }).render('#paypal-button-container');
     </script>
 
-</div>
-</div>
 </div>
 
 <?php require "includes/footer.php"; ?>
