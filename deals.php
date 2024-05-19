@@ -2,7 +2,7 @@
 <?php require "config/connect.php"; ?>
 
 <?php
-$cities = $conn->query("SELECT * FROM cities ORDER BY price ASC LIMIT 4");
+$cities = $conn->query("SELECT * FROM cities ORDER BY price ASC");
 $cities->execute();
 $allCities = $cities->fetchAll(PDO::FETCH_OBJ);
 
