@@ -126,6 +126,9 @@ if (isset($_POST['submit'])) {
                                     <option type="checkbox" name="option1" value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
+                                    <option value="3">4</option>
+                                    <option value="3">5</option>
+                                    <option value="3">6</option>
                                 </select>
                             </fieldset>
                         </div>
@@ -143,7 +146,7 @@ if (isset($_POST['submit'])) {
                         </div>
                         <div class="col-lg-12">
                             <fieldset>
-                                <button type="submit" name="submit" class="main-button">Make Your Reservation Now</button>
+                                <button type="submit" name="submit" class="main-button">Make Your Reservation and Pay Now</button>
                             </fieldset>
                         </div>
                     </div>

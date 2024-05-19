@@ -1,6 +1,14 @@
 <?php require "includes/header.php"; ?>
 <?php require "config/connect.php"; ?>
 
+<?php
+    if(!isset($_SERVER['HTTP_REFERER'])){
+        header('location: http://localhost/wooxtravel/index.php');
+        exit;
+    }
+
+?>
+
 <div class="container ">
     <!-- Replace "test" with your own sandbox Business account app client ID -->
     <script src="https://www.paypal.com/sdk/js?client-id=AU_NG2eBB4E6TZvYd7HhLvWGPJZLsINc9ph6DyGjauE5oPtJ-2MfSZu7YpQoxvm6nKBsggcFVteinlFY&currency=USD"></script>
